@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react'
 
 const ReviewDetails = () => {
     const { reviewId } = useParams()
-    
+
     const [review, setReview] = useState({})
-    
+
     const getReview = async () => {
-        const result = await axios.get(`localhost:3001/api/review/${reviewId}`)
+        const result = await axios.get(`http://localhost:3001/api/review/${reviewId}`)
         console.log(result)
     }
     useEffect(() => {
