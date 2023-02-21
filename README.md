@@ -1,6 +1,6 @@
 # MERNival
 
-![RolleraCoaster](https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/PTKI47WZ3JHTJG4QKEFGLIWGJQ.jpg?_a=ATO2Bfe0)
+![RolleraCoaster](https://i.imgur.com/meEn216.jpeg)
 
 # About
 
