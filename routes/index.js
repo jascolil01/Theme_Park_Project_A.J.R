@@ -28,6 +28,8 @@ router.delete('/review/:id', controllers.deleteReview)
 
 router.delete('/comment/:id', controllers.deleteComment)
 
+router.get('/comment/review/:id', controllers.getCommentByReview)
+
 
 
 module.exports= router
