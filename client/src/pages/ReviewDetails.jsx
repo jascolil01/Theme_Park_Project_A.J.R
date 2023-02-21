@@ -3,10 +3,10 @@
 const ReviewDetails = () => {
     //axios call to review by id
     //axios call to get all comments by review id
-    const image = review.image
+    // const image = review.image
     return (
         <div>
-            <img src={image} alt="Theme park image" />
+            {/* <img src={image} alt="Theme park image" />
             <h1>{review.park}</h1>
             <h3>{review.type}</h3>
             <h3>{review.rides}</h3>
@@ -21,7 +21,7 @@ const ReviewDetails = () => {
                         <h3>{comment.contents}</h3>
                     </div>
                 })}
-            </div>
+            </div> */}
 
         </div>
     )
