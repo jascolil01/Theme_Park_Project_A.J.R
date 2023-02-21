@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom"
 
-
-const ReviewCard = () => {
+const ReviewCard = (props) => {
+    const navigate = useNavigate()
+    
   return (
-    <div>ReviewCard</div>
+    <div>
+        <h1>{props.name}</h1>
+    </div>
   )
 }
 
