@@ -14,7 +14,6 @@ const ReviewCard = (props) => {
               <h5 className="card-title">{props.name}</h5>
               <p className="card-text">Type: {props.type}</p>
               <p className="card-text">Overall Rating: {props.rating} </p>
-              <button className="btn btn-primary" onClick={() => handleClick(props.id)}>View Reviews</button>
           </div>
       </div>
   )
