@@ -17,6 +17,10 @@ const Home = () => {
         getReviews()
     }, [])
 
+    const handleClick = () => {
+        
+    }
+
     return (
         <div>
             <Header />
@@ -31,6 +35,7 @@ const Home = () => {
             </header>
             <div className="entire-home">
                 <h1 className="subtitle">Choose a Park</h1>
+                <button>Add Review</button>
                 <section className="container-grid">
                     {review.map((review) => (
                         <ReviewCard
