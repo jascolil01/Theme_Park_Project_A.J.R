@@ -29,14 +29,14 @@ const Home = () => {
     }
 
     return (
+
         <div>
             <Header />
-            <div className="home-page">
-                <header className="home-header">
-                    <div className="head">
-                        <div className="head-container">
-                            <div className="head-text">
-                            </div>
+        <div className="home-page">
+            <header className="home-header">
+                <div className="head">
+                    <div className="head-container">
+                        <div className="head-text">
                         </div>
                     </div>
                 </header>
@@ -65,6 +65,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
+
     )
 }
 
