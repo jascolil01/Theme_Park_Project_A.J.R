@@ -53,43 +53,44 @@ const ReviewDetails = () => {
     return (
         <div>
             <Header />
-            <img src={image} alt="Theme park image" />
-            <h1>{review.park}</h1>
-            <h3>Type: {review.type}</h3>
-            <h3>Overall:{review.overallRating}</h3>
-            <h3>Rides:{review.ridesRating}</h3>
-            <h3>Concessions:{review.concessionsRating}</h3>
-            <h3>Customer Service:{review.customerService}</h3>
-            <h3>Safety:{review.safetyRating}</h3>
-            <div className="comment-section">
-                <form onSubmit={makeComment}>
-                    <label htmlFor="userName">Name:</label>
-                    <input
-                        type="text"
-                        id="userName"
-                        onChange={handleChange}
-                        value={formState.userName}
-                    />
-                    <label htmlFor="content">Write a comment here!</label>
-                    <input
-                        id="content"
-                        cols="30"
-                        rows="10"
-                        onChange={handleChange}
-                        value={formState.content}
-                    ></input>
-                    <button type="submit">Send</button>
-                </form>
-                {comments.map((comment) => (
-                    <div key={comment._id}>
-                        <h3>{comment.userName}: {comment.content}</h3>
-                        <button onClick={() => handleClick(comment._id)}>Delete</button>
-                    </div>
-                ))}
+            <div className="review-details">
+                <img src={image} alt="Theme park image" />
+                <h1>{review.park}</h1>
+                <h3>Type: {review.type}</h3>
+                <h3>Overall:{review.overallRating}</h3>
+                <h3>Rides:{review.ridesRating}</h3>
+                <h3>Concessions:{review.concessionsRating}</h3>
+                <h3>Customer Service:{review.customerService}</h3>
+                <h3>Safety:{review.safetyRating}</h3>
+                <div className="comment-section">
+                    <form onSubmit={makeComment}>
+                        <label htmlFor="userName">Name:</label>
+                        <input
+                            type="text"
+                            id="userName"
+                            onChange={handleChange}
+                            value={formState.userName}
+                        />
+                        <label htmlFor="content">Write a comment here!</label>
+                        <input
+                            id="content"
+                            cols="30"
+                            rows="10"
+                            onChange={handleChange}
+                            value={formState.content}
+                        ></input>
+                        <button type="submit">Send</button>
+                    </form>
+                    {comments.map((comment) => (
+                        <div key={comment._id}>
+                            <h3>{comment.userName}: {comment.content}</h3>
+                            <button onClick={() => handleClick(comment._id)}>Delete</button>
+                        </div>
+                    ))}
+                </div>
             </div>
-
         </div>
-    )
+    );
 }
 
-export default ReviewDetails
+export default ReviewDetails;
