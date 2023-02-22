@@ -31,10 +31,10 @@ const ReviewDetails = () => {
         <div>
            <img src={image} alt="Theme park image" />
             <h1>{review.park}</h1>
-            <h3>Type:{review.type}</h3>
+            <h3>Type: {review.type}</h3>
+            <h3>Overall:{review.overallRating}</h3>
             <h3>Rides:{review.ridesRating}</h3>
             <h3>Concessions:{review.concessionsRating}</h3>
-            <h3>Overall:{review.overall}</h3>
             <h3>Customer Service:{review.customerService}</h3>
             <h3>Safety:{review.safetyRating}</h3>
             <div className="comment-section">
