@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #222;
+  color: #fff;
 }
 .App {
   text-align: center;
@@ -22,9 +24,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 250px;
   background-color: #1665fe;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 
 a:hover {
@@ -37,6 +40,58 @@ a:hover {
   max-width: 100%;
   object-fit: contain;
 }
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #1b1b1b;
+  color: #f5f5f5;
+}
+
+.header.dark-mode {
+  background-color: #1b1b1b;
+  color: #f5f5f5;
+  box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.1);
+}
+
+.card.dark-mode {
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+  border-color: #3f3f3f;
+}
+
+.card:hover.dark-mode {
+  background-color: #3f3f3f;
+  border-color: #3f3f3f;
+  color: #f5f5f5;
+  box-shadow: 0px 5px 10px 0px rgba(255, 255, 255, 0.2);
+}
+
+.card-img-top.dark-mode {
+  border-radius: 5px;
+}
+
+.card-body.dark-mode {
+  background-color: #2b2b2b;
+}
+
+.card-title.dark-mode {
+  color: #f5f5f5;
+}
+
+.card-text.dark-mode {
+  color: #f5f5f5;
+}
+
+.btn-primary.dark-mode {
+  background-color: #1665fe;
+  border-color: #1665fe;
+}
+
+.btn-primary.dark-mode:hover {
+  background-color: #0d47a1;
+  border-color: #0d47a1;
+}
+
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -75,6 +130,8 @@ a:hover {
   cursor: pointer;
   transition: transform 0.2s;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  background-color: #333;
+  color: #fff;
 }
 
 .card:hover {
@@ -120,8 +177,12 @@ a:hover {
   padding: 20px;
   background-color: rgba(240, 240, 255, 0.734);
   border-radius: 7%;
+  background-color: #333;
+  color: #fff;
 }
 
 .add-form > button {
-  margin-top: 20px
+  margin-top: 20px;
+  background-color: #1665fe;
+  color: #fff;
 }
