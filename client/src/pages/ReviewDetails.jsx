@@ -24,6 +24,11 @@ const ReviewDetails = () => {
         getComments()
     }, [])
 
+    const handleClick = async (commentId) => {
+        await axios.delete(`http://localhost:3001/api/comment/${commentId}`)
+        getComments()
+    }
+
     //axios call to review by id
     //axios call to get all comments by review id
     const image = review.image
@@ -31,19 +36,19 @@ const ReviewDetails = () => {
         <div>
            <img src={image} alt="Theme park image" />
             <h1>{review.park}</h1>
-            <h3>Type:{review.type}</h3>
+            <h3>Type: {review.type}</h3>
+            <h3>Overall:{review.overallRating}</h3>
             <h3>Rides:{review.ridesRating}</h3>
             <h3>Concessions:{review.concessionsRating}</h3>
-            <h3>Overall:{review.overall}</h3>
             <h3>Customer Service:{review.customerService}</h3>
             <h3>Safety:{review.safetyRating}</h3>
             <div className="comment-section">
-                {comments.map((comment) => {
+                {comments.map((comment) => (
                     <div>
-                        <h3>{comment.userName}</h3>
-                        <h3>{comment.content}</h3>
+                        <h3>{comment.userName}: {comment.content}</h3>
+                        <button onClick={() => handleClick(comment._id)}>Delete</button>
                     </div>
-                })}
+                ))}
             </div> 
 
         </div>
