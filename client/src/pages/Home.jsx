@@ -7,6 +7,7 @@ import AddReviewForm from "../components/AddReviewForm"
 
 
 const Home = () => {
+    const [isDarkMode, setIsDarkMode] = useState(false);
     const [review, setReview] = useState([])
     const [clicked, toggleClicked] = useState(false)
     const getReviews = async () => {
@@ -14,6 +15,10 @@ const Home = () => {
         setReview(response.data.reviews)
         console.log(response.data.reviews)
     }
+
+    const handleToggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode);
+      };
 
     useEffect(() => {
         getReviews()
@@ -30,8 +35,8 @@ const Home = () => {
 
     return (
 
-        <div>
-            <Header />
+        <div className={isDarkMode ? "dark-mode" : ""}>
+      <Header handleToggleDarkMode={handleToggleDarkMode} isDarkMode={isDarkMode} />
             <div className="home-page">
                 <header className="home-header">
                     <div className="head">
@@ -43,7 +48,7 @@ const Home = () => {
                 </header>
                 <div className="entire-home">
                     <h1 className="subtitle">Choose a Park</h1>
-
+                    
                     {clicked ? (
                         <div>
                             <button onClick={() => handleClick()}>Close</button>

@@ -1,16 +1,17 @@
 import React from 'react';
 
 
-function Header() {
+const Header = ({ handleToggleDarkMode, isDarkMode }) => {
   return (
-    <div className="header">
-    <div className="logo-div">
-    <a href="/">
+    <header className={isDarkMode ? "header dark-mode" : "header"}>
+      <div className="logo-div">
+        <a href="/">
       <img src="https://i.imgur.com/jKvsXlY.gif" alt="Banner" className="logo" />
       </a>
-    </div>
-    </div>
+      </div>
+      
+    </header>
   );
-}
+};
 
 export default Header;

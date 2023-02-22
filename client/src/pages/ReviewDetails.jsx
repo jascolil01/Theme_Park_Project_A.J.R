@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import Header from "../components/Header"
 
 const ReviewDetails = () => {
     const { reviewId } = useParams()
@@ -51,6 +52,7 @@ const ReviewDetails = () => {
     const image = review.image
     return (
         <div>
+            <Header />
             <img src={image} alt="Theme park image" />
             <h1>{review.park}</h1>
             <h3>Type: {review.type}</h3>
