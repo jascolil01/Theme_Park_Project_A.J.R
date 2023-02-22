@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 const Reviews = new Schema(
     {
         park: { type: String, required: true },
-        type:{ type: String, required: true},
+        type:{ type: String, required: true },
+        overallRating:{ type: String, required: true },
         ridesRating: { type: String, required: true },
         concessionsRating: { type: String, required: true },
         customerService: { type: String, required: true },
