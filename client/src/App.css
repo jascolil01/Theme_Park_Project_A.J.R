@@ -7,6 +7,26 @@
   pointer-events: none;
 }
 
+.logo-div {
+  display: flex;
+  background-color: #1665fe;
+  border-radius: 20px;
+  height: 250px;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  height: 100px;
+  width: 100px;
+  border-radius: 200px;
+}
+
+.banner {
+  width: 2000px;
+  border-radius: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -32,6 +52,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
