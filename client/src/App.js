@@ -7,7 +7,6 @@ import Header from './components/Header'
 function App() {
   return (
     <div className="App">
-      <Header/>
       <Routes>
         <Route path='/review/:reviewId' element={<ReviewDetails />} />
         <Route path='/' element={<Home />} /> 
