@@ -186,3 +186,66 @@ body.dark-mode {
   background-color: #1665fe;
   color: #fff;
 }
+
+.review-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-details img {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.review-details h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.review-details h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.review-details .comment-section {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.review-details form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.review-details label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.review-details input {
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.review-details button {
+  background-color: #f1356d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.review-details button:hover {
+  background-color: #d81f5f;
+}
