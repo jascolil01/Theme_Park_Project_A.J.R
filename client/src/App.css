@@ -108,3 +108,18 @@
 .subtitle {
   animation: blink 2s infinite;
 }
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin: 1% 40%;
+  padding: 20px;
+  background-color: rgba(240, 240, 255, 0.734);
+  border-radius: 7%;
+}
+
+.add-form > button {
+  margin-top: 20px
+}
