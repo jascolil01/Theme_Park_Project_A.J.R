@@ -18,8 +18,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
-            <Header />
+        
         <div className="home-page">
             <header className="home-header">
                 <div className="head">
@@ -46,7 +45,7 @@ const Home = () => {
 
             </div>
         </div>
-    </div>
+    
     )
 }
 
