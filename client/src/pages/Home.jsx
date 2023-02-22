@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import ReviewCard from "../components/ReviewCard"
@@ -51,10 +52,10 @@ const Home = () => {
                     
                     {clicked ? (
                         <div>
-                            <button onClick={() => handleClick()}>Close</button>
+                            <button id="close-btn" onClick={() => handleClick()}>Close</button>
                             <AddReviewForm getReviews={getReviews} />
                         </div>
-                    ) : <button onClick={() => handleClick()}>Add Review</button>}
+                    ) : <button id="add-btn" onClick={() => handleClick()}>Add Review</button>}
                     <section className="container-grid">
                         {review.map((review) => (
                             <ReviewCard

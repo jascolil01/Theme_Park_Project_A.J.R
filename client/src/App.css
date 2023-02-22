@@ -151,6 +151,7 @@ body.dark-mode {
 
 .card-title {
   margin: 0;
+  font-size: large
 }
 
 .card-text {
@@ -161,7 +162,7 @@ body.dark-mode {
   margin-top: 10px;
 }
 @keyframes blink {
-  from, to { color: black; }
+  from, to { color: rgb(43, 43, 251); }
   50% { color: white; }
 }
 .subtitle {
@@ -187,10 +188,15 @@ body.dark-mode {
   color: #fff;
 }
 
+.add-form > label, .add-form > input, .add-form > select {
+  margin-top: 5px
+}
+
 .review-details {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 }
 
 .review-details img {
@@ -248,4 +254,38 @@ body.dark-mode {
 
 .review-details button:hover {
   background-color: #d81f5f;
+}
+
+#add-btn{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin: 30px auto
+}
+
+#add-btn:hover{
+  cursor: pointer;
+  background-color: #3f9442
+}
+
+#close-btn{
+  background-color: #f1356d;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+#close-btn:hover{
+  background-color: #d81f5f;
+  cursor: pointer
+}
+
+header{
+  border-bottom-style: solid;
+  border: 2px black
 }
