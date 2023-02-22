@@ -24,6 +24,11 @@ const ReviewDetails = () => {
         getComments()
     }, [])
 
+    const handleClick = async (commentId) => {
+        await axios.delete(`http://localhost:3001/api/comment/${commentId}`)
+        getComments()
+    }
+
     //axios call to review by id
     //axios call to get all comments by review id
     const image = review.image
@@ -41,6 +46,7 @@ const ReviewDetails = () => {
                 {comments.map((comment) => (
                     <div>
                         <h3>{comment.userName}: {comment.content}</h3>
+                        <button onClick={() => handleClick(comment._id)}>Delete</button>
                     </div>
                 ))}
             </div> 
