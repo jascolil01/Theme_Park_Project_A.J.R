@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import ReviewCard from "../components/ReviewCard"
+import Header from "../components/Header"
 
 
 
@@ -8,8 +9,8 @@ const Home = () => {
     const [review, setReview] = useState([])
     const getReviews = async () => {
         const response = await axios.get('http://localhost:3001/api/review')
-        console.log(response.data)
-
+        setReview(response.data.reviews) 
+        console.log(response.data.reviews)
     }
 
     useEffect(() => {
@@ -17,32 +18,35 @@ const Home = () => {
     }, [])
 
     return (
-
+        <div>
+            <Header />
         <div className="home-page">
             <header className="home-header">
                 <div className="head">
                     <div className="head-container">
                         <div className="head-text">
-                            <h1>MERNival</h1>
                         </div>
                     </div>
                 </div>
             </header>
             <div className="entire-home">
-                <h1>Choose a Park</h1>
+                <h1 className="subtitle">Choose a Park</h1>
                 <section className="container-grid">
                     {review.map((review) => (
                         <ReviewCard
                             key={review._id}
-                            objectid={review._id}
+                            id={review._id}
                             name={review.park}
                             image={review.image}
+                            ridesRating={review.ridesRating}
+                            type={review.type}
                         />
                     ))}
                 </section>
 
             </div>
         </div>
+    </div>
     )
 }
 

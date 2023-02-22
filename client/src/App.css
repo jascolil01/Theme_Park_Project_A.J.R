@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  margin: 0;
+}
+
+.card-text {
+  margin: 5px 0;
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
+@keyframes blink {
+  from, to { color: black; }
+  50% { color: white; }
+}
+.subtitle {
+  animation: blink 2s infinite;
+}
