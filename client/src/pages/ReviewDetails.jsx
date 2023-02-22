@@ -38,12 +38,11 @@ const ReviewDetails = () => {
             <h3>Customer Service:{review.customerService}</h3>
             <h3>Safety:{review.safetyRating}</h3>
             <div className="comment-section">
-                {/* {comments.map((comment) => {
+                {comments.map((comment) => (
                     <div>
-                        <h3>{comment.userName}</h3>
-                        <h3>{comment.content}</h3>
+                        <h3>{comment.userName}: {comment.content}</h3>
                     </div>
-                })} */}
+                ))}
             </div> 
 
         </div>
