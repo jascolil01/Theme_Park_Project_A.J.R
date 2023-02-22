@@ -32,21 +32,22 @@ const Home = () => {
 
         <div>
             <Header />
-        <div className="home-page">
-            <header className="home-header">
-                <div className="head">
-                    <div className="head-container">
-                        <div className="head-text">
+            <div className="home-page">
+                <header className="home-header">
+                    <div className="head">
+                        <div className="head-container">
+                            <div className="head-text">
+                            </div>
                         </div>
                     </div>
                 </header>
                 <div className="entire-home">
                     <h1 className="subtitle">Choose a Park</h1>
-                    
+
                     {clicked ? (
                         <div>
-                        <button onClick={() => handleClick()}>Close</button>
-                        <AddReviewForm getReviews={getReviews}/>
+                            <button onClick={() => handleClick()}>Close</button>
+                            <AddReviewForm getReviews={getReviews} />
                         </div>
                     ) : <button onClick={() => handleClick()}>Add Review</button>}
                     <section className="container-grid">
