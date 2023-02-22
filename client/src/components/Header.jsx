@@ -5,10 +5,10 @@ function Header() {
   return (
     <div className="header">
       <div className="logo">
-        <img src="https://i.imgur.com/MlsbVKq.jpeg" alt="Logo" />
+        <img src="https://i.imgur.com/jKvsXlY.gif" alt="Banner" />
       </div>
       <div className="title">
-        <h1>MERNival</h1>
+        
       </div>
     </div>
   );
