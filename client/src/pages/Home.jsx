@@ -38,7 +38,7 @@ const Home = () => {
                             id={review._id}
                             name={review.park}
                             image={review.image}
-                            ridesRating={review.ridesRating}
+                            rating={review.overallRating}
                             type={review.type}
                         />
                     ))}
