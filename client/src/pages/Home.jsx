@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import ReviewCard from "../components/ReviewCard"
@@ -40,7 +41,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                </div>
                 </header>
                 <div className="entire-home">
                     <h1 className="subtitle">Choose a Park</h1>
