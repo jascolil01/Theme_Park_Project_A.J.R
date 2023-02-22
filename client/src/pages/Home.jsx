@@ -39,6 +39,7 @@ const Home = () => {
                         <div className="head-text">
                         </div>
                     </div>
+                </div>
                 </header>
                 <div className="entire-home">
                     <h1 className="subtitle">Choose a Park</h1>
