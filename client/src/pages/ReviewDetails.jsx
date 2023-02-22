@@ -39,7 +39,6 @@ const ReviewDetails = () => {
     useEffect(() => {
         getReview()
         getComments()
-        makeComment()
     }, [])
 
     const handleClick = async (commentId) => {
