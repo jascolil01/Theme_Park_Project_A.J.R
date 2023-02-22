@@ -5,8 +5,16 @@ import { useState, useEffect } from 'react'
 const ReviewDetails = () => {
     const { reviewId } = useParams()
 
+    const initialState = {
+        userName: '',
+        content: '',
+        reviewId: `${reviewId}`
+    }
+
+
     const [review, setReview] = useState({})
     const [comments, setComments] = useState([])
+    const [formState, setFormState] = useState(initialState)
 
     const getReview = async () => {
         const result = await axios.get(`http://localhost:3001/api/review/${reviewId}`)
@@ -19,9 +27,19 @@ const ReviewDetails = () => {
         console.log(result.data)
     }
 
+    const makeComment = async () => {
+        await axios.post('http://localhost:3001/api/comment', formState)
+        setFormState(initialState)
+    }
+
+    const handleChange = (event) => {
+        setFormState({ ...formState, [event.target.id]: event.target.value })
+    }
+
     useEffect(() => {
         getReview()
         getComments()
+        makeComment()
     }, [])
 
     const handleClick = async (commentId) => {
@@ -34,7 +52,7 @@ const ReviewDetails = () => {
     const image = review.image
     return (
         <div>
-           <img src={image} alt="Theme park image" />
+            <img src={image} alt="Theme park image" />
             <h1>{review.park}</h1>
             <h3>Type: {review.type}</h3>
             <h3>Overall:{review.overallRating}</h3>
@@ -43,13 +61,31 @@ const ReviewDetails = () => {
             <h3>Customer Service:{review.customerService}</h3>
             <h3>Safety:{review.safetyRating}</h3>
             <div className="comment-section">
+                <form onSubmit={makeComment}>
+                    <label htmlFor="userName">Name:</label>
+                    <input
+                        type="text"
+                        id="userName"
+                        onChange={handleChange}
+                        value={formState.userName}
+                    />
+                    <label htmlFor="content">Write a comment here!</label>
+                    <input
+                        id="content"
+                        cols="30"
+                        rows="10"
+                        onChange={handleChange}
+                        value={formState.content}
+                    ></input>
+                    <button type="submit">Send</button>
+                </form>
                 {comments.map((comment) => (
-                    <div>
+                    <div key={comment._id}>
                         <h3>{comment.userName}: {comment.content}</h3>
                         <button onClick={() => handleClick(comment._id)}>Delete</button>
                     </div>
                 ))}
-            </div> 
+            </div>
 
         </div>
     )
