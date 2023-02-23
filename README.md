@@ -8,7 +8,7 @@ Hello, This is the Repo for our Roller Coaster Website
 
 # Functionality
 
-[Navigate to the website here]()
+[Navigate to the website here](https://mernival.herokuapp.com/)
 
 This page allows you to Create and Read reviews of local theme parks. This is a MERN(Mongoose, Express, React, NodeJS) built website.
 
