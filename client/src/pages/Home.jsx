@@ -65,6 +65,7 @@ const Home = () => {
                                 image={review.image}
                                 rating={review.overallRating}
                                 type={review.type}
+                                getReviews={getReviews}
                             />
                         ))}
                     </section>
