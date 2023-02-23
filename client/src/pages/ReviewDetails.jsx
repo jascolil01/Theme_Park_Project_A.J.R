@@ -25,7 +25,6 @@ const ReviewDetails = () => {
     const getComments = async () => {
         const result = await axios.get(`/api/comment/review/${reviewId}`)
         setComments(result.data)
-        console.log(result.data)
     }
 
     const makeComment = async () => {
