@@ -43,7 +43,7 @@ const ReviewDetails = () => {
     }, [])
 
     const handleClick = async (commentId) => {
-        await axios.delete(`/comment/${commentId}`)
+        await axios.delete(`/api/comment/${commentId}`)
         getComments()
     }
 
