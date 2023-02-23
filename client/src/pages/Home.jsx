@@ -14,7 +14,6 @@ const Home = () => {
     const getReviews = async () => {
         const response = await axios.get('/api/review')
         setReview(response.data.reviews)
-        console.log(response.data.reviews)
     }
 
     const handleToggleDarkMode = () => {
