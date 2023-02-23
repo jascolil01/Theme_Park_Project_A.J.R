@@ -1,17 +1,21 @@
 # MERNival
 
-![RolleraCoaster](https://i.imgur.com/meEn216.jpeg)
+![RolleraCoaster](https://i.imgur.com/jKvsXlY.gif)
 
-# About
+## ***Description***
 
-Hello, This is the Repo for our Roller Coaster Website
+### MERNival is an MERN application that allows users to view different theme parks and its ratings while also allowing them to add their own theme park. 
+***
+## ***Getting Started***
 
-# Functionality
+Navigate to the website here: [MERNival] (https://mernival.herokuapp.com/)
+***
+## ***Contributors***
 
-[Navigate to the website here](https://mernival.herokuapp.com/)
-
-This page allows you to Create and Read reviews of local theme parks. This is a MERN(Mongoose, Express, React, NodeJS) built website.
-
+Anatoliy Agadzhanov: [GitHub] (https://github.com/yesanatoliy) 
+Joshua Ascolillo: [GitHub] (https://github.com/jascolil01)
+Ryan Cho: [GitHub] (https://github.com/notryancho)
+***
 # Credits
 
 [Link to website for parks 1](https://tourscanner.com/blog/best-theme-parks-in-the-world/)
