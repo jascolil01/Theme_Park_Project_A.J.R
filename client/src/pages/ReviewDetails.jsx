@@ -18,7 +18,7 @@ const ReviewDetails = () => {
     const [formState, setFormState] = useState(initialState)
 
     const getReview = async () => {
-        const result = await axios.get(`/review/${reviewId}`)
+        const result = await axios.get(`/api/review/${reviewId}`)
         setReview(result.data.reviews)
     }
 
