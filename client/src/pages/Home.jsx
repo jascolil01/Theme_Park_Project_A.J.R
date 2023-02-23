@@ -12,14 +12,14 @@ const Home = () => {
     const [review, setReview] = useState([])
     const [clicked, toggleClicked] = useState(false)
     const getReviews = async () => {
-        const response = await axios.get('http://localhost:3001/api/review')
+        const response = await axios.get('/api/review')
         setReview(response.data.reviews)
         console.log(response.data.reviews)
     }
 
     const handleToggleDarkMode = () => {
         setIsDarkMode(!isDarkMode);
-      };
+    };
 
     useEffect(() => {
         getReviews()
@@ -37,7 +37,7 @@ const Home = () => {
     return (
 
         <div className={isDarkMode ? "dark-mode" : ""}>
-      <Header handleToggleDarkMode={handleToggleDarkMode} isDarkMode={isDarkMode} />
+            <Header handleToggleDarkMode={handleToggleDarkMode} isDarkMode={isDarkMode} />
             <div className="home-page">
                 <header className="home-header">
                     <div className="head">
@@ -49,7 +49,7 @@ const Home = () => {
                 </header>
                 <div className="entire-home">
                     <h1 className="subtitle">Choose a Park</h1>
-                    
+
                     {clicked ? (
                         <div>
                             <button id="close-btn" onClick={() => handleClick()}>Close</button>

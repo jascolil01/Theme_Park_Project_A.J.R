@@ -18,18 +18,18 @@ const ReviewDetails = () => {
     const [formState, setFormState] = useState(initialState)
 
     const getReview = async () => {
-        const result = await axios.get(`http://localhost:3001/api/review/${reviewId}`)
+        const result = await axios.get(`/api/review/${reviewId}`)
         setReview(result.data.reviews)
     }
 
     const getComments = async () => {
-        const result = await axios.get(`http://localhost:3001/api/comment/review/${reviewId}`)
+        const result = await axios.get(`/api/comment/review/${reviewId}`)
         setComments(result.data)
         console.log(result.data)
     }
 
     const makeComment = async () => {
-        await axios.post('http://localhost:3001/api/comment', formState)
+        await axios.post('/api/comment', formState)
         setFormState(initialState)
     }
 
@@ -43,7 +43,7 @@ const ReviewDetails = () => {
     }, [])
 
     const handleClick = async (commentId) => {
-        await axios.delete(`http://localhost:3001/api/comment/${commentId}`)
+        await axios.delete(`/comment/${commentId}`)
         getComments()
     }
 
