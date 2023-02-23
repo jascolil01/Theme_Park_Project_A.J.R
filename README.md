@@ -8,13 +8,13 @@
 ***
 ## ***Getting Started***
 
-Navigate to the website here: [MERNival] (https://mernival.herokuapp.com/)
+### Navigate to the website here: [MERNival] (https://mernival.herokuapp.com/)
 ***
 ## ***Contributors***
 
-Anatoliy Agadzhanov: [GitHub] (https://github.com/yesanatoliy) 
-Joshua Ascolillo: [GitHub] (https://github.com/jascolil01)
-Ryan Cho: [GitHub] (https://github.com/notryancho)
+### Anatoliy Agadzhanov: [GitHub] (https://github.com/yesanatoliy) 
+### Joshua Ascolillo: [GitHub] (https://github.com/jascolil01)
+### Ryan Cho: [GitHub] (https://github.com/notryancho)
 ***
 # Credits
 
