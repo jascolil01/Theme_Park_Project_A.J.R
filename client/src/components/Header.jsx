@@ -6,10 +6,10 @@ const Header = ({ handleToggleDarkMode, isDarkMode }) => {
     <header className={isDarkMode ? "header dark-mode" : "header"}>
       <div className="logo-div">
         <a href="/">
-      <img src="https://i.imgur.com/jKvsXlY.gif" alt="Banner" className="logo" />
-      </a>
+          <img src="https://i.imgur.com/jKvsXlY.gif" alt="Banner" className="logo" />
+        </a>
       </div>
-      
+
     </header>
   );
 };

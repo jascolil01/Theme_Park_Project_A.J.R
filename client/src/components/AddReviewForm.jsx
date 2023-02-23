@@ -16,7 +16,7 @@ const AddReviewForm = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post(`http://localhost:3001/api/review`, formState)
+    await axios.post(`/api/review`, formState)
     setFormState(initialState)
     props.getReviews()
   }
