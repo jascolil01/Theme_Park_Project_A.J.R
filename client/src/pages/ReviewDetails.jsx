@@ -46,6 +46,13 @@ const ReviewDetails = () => {
         getComments()
     }
 
+    const deleteReview = async () => {
+        await axios.delete(`/api/review/${reviewId}`)
+        // Redirect to the home page after successful deletion
+        window.location.href = '/';
+        }
+      
+
     //axios call to review by id
     //axios call to get all comments by review id
     const image = review.image
@@ -61,6 +68,7 @@ const ReviewDetails = () => {
                 <h3>Concessions:{review.concessionsRating}</h3>
                 <h3>Customer Service:{review.customerService}</h3>
                 <h3>Safety:{review.safetyRating}</h3>
+                <button onClick={deleteReview}>Delete Review</button>
                 <div className="comment-section">
                     <form onSubmit={makeComment}>
                         <label htmlFor="userName">Name:</label>

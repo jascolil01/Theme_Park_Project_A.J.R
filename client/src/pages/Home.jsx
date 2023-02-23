@@ -14,6 +14,7 @@ const Home = () => {
     const getReviews = async () => {
         const response = await axios.get('/api/review')
         setReview(response.data.reviews)
+        console.log(response)
     }
 
     const handleToggleDarkMode = () => {
@@ -64,7 +65,7 @@ const Home = () => {
                                 image={review.image}
                                 rating={review.overallRating}
                                 type={review.type}
-                                getReviews={getReviews}
+                    
                             />
                         ))}
                     </section>
