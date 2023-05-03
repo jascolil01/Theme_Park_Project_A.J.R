@@ -3,10 +3,12 @@ body {
   padding: 0;
   background-color: #222;
   color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .App {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .App-logo {
@@ -133,6 +135,7 @@ body.dark-mode {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   background-color: #333;
   color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card:hover {
@@ -161,6 +164,7 @@ body.dark-mode {
 
 .btn-primary {
   margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes blink {
